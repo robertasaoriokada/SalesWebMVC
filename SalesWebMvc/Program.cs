@@ -7,6 +7,7 @@ string connectionString = builder.Configuration.GetConnectionString("SalesWebMvc
 builder.Services.AddDbContext<SalesWebMvcContext>(options =>
     options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
 
+builder.Services.AddScoped<SeedingService>();
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
@@ -20,6 +21,7 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+app.Services.CreateScope().ServiceProvider.GetRequiredService<SeedingService>().Seed();
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
