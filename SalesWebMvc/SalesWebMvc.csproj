@@ -7,6 +7,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Models\Services\NewFolder1\**" />
+    <Compile Remove="Models\Services\NewFolder2\**" />
+    <Compile Remove="Models\Services\NewFolder\**" />
+    <Content Remove="Models\Services\NewFolder1\**" />
+    <Content Remove="Models\Services\NewFolder2\**" />
+    <Content Remove="Models\Services\NewFolder\**" />
+    <EmbeddedResource Remove="Models\Services\NewFolder1\**" />
+    <EmbeddedResource Remove="Models\Services\NewFolder2\**" />
+    <EmbeddedResource Remove="Models\Services\NewFolder\**" />
+    <None Remove="Models\Services\NewFolder1\**" />
+    <None Remove="Models\Services\NewFolder2\**" />
+    <None Remove="Models\Services\NewFolder\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Remove="Data\DepartmentService.cs" />
   </ItemGroup>
 
